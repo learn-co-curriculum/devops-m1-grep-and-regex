@@ -20,10 +20,10 @@ The basic syntax to match patterns with `grep` is:
 $ grep <pattern> file
 ```
 
-If you want to search within an entire folder/directory, you can use the `-R` argument:
+If you want to search within an entire folder/directory, you can use the `-r` argument:
 
 ```bash
-$ grep -R <pattern> directory
+$ grep -r <pattern> directory
 ```
 
 The `<pattern>` listed above is what is known as a *regular expression*.
@@ -35,7 +35,7 @@ A **regular expression**, commonly referred to as **regex**, is a *pattern-match
 At its most basic, a regular expression can consist of only the characters themselves. For instance, if you want to use `grep` to find all files that have the word `hello` in them in the current directory, you could do:
 
 ```bash
-$ grep -R 'hello' .
+$ grep -r 'hello' .
 ```
 
 > **Note:** Remember how when running scripts in the same directory, we used `./script.sh`? The `.` symbol is widely used to refer to the current directory.
