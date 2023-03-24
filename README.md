@@ -35,7 +35,7 @@ A **regular expression**, commonly referred to as **regex**, is a *pattern-match
 At its most basic, a regular expression can consist of only the characters themselves. For instance, if you want to use `grep` to find all files that have the word `hello` in them in the current directory, you could do:
 
 ```bash
-$ grep -r 'hello' .
+$ grep -rE 'hello' .
 ```
 
 > **Note:** Remember how when running scripts in the same directory, we used `./script.sh`? The `.` symbol is widely used to refer to the current directory.
@@ -63,14 +63,16 @@ Now let's go over some examples so you see how metacharacters are commonly emplo
 
 ```bash
 # Match either "color" or "colour" (british spelling)
-grep 'colou?r' file.txt
+grep -E 'colou?r' file.txt
 # Match any word beginning with "ca", for example canada or car
-grep 'ca.*' file.txt
+grep -E 'ca.*' file.txt
 # Match any line that starts with an uppercase letter
-grep '^[A-Z]' file.txt
+grep -E '^[A-Z]' file.txt
 ```
 
 > **Note:** Remember the `#` are comments, which are ignored by the shell and only exist to give the reader information!
+
+Note the usage of the `-E` parameter; while often optional, using this parameter is good practice since it specifies we are using regex to match. If you don't use it, certain metacharacters could be misinterpreted (for example, the *or* operator `|`).
 
 Lastly, if you want to use a character that is a metacharacter, you have to *escape* it by adding a `\` behind it. For example, since the `*` symbol is used to match 0 or more occurences, if you want to search for asterisks in files, you would use `\*`.
 
