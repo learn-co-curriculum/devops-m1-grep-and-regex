@@ -55,7 +55,7 @@ Here's a table listing the most commonly used ones:
 |[...]|Matches any one of the characters within the brackets|
 |[^...]|Matches any character that is not within the brackets|
 |(…)|Matches the enclosed characters as a group|
-|||Matches either the expression before or after the | symbol|
+|\||Matches either the expression before or after the \| symbol|
 
 You can also use ranges, like `[A-Z]` or `[0-9]`.
 
