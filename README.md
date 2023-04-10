@@ -2,7 +2,7 @@
 
 ## Learning goals
 
-- Understand the purpose and usage `grep` and `regex`
+- Understand the purpose and usage of `grep` and `regex`
 - Recognize the basic syntax of regular expressions.
 - Apply regex and grep for searching and filtering data in a file or directory
 
@@ -44,18 +44,18 @@ That basic pattern only scratches the surface, however; regex becomes much more 
 
 Here's a table listing the most commonly used ones:
 
-|Metacharacter|Pattern|
-|:----|:----|
-|.|Matches any single character except a newline|
-|*|Matches zero or more occurrences of the preceding character|
-|+|Matches one or more occurrences of the preceding character|
-|?|Matches zero or one occurrence of the preceding character|
-|^|Matches the beginning of a line|
-|$|Matches the end of a line|
-|[...]|Matches any one of the characters within the brackets|
-|[^...]|Matches any character that is not within the brackets|
-|(…)|Matches the enclosed characters as a group|
-|\||Matches either the expression before or after the \| symbol|
+| Metacharacter | Pattern                                                     |
+|:--------------|:------------------------------------------------------------|
+| .             | Matches any single character except a newline               |
+| *             | Matches zero or more occurrences of the preceding character |
+| +             | Matches one or more occurrences of the preceding character  |
+| ?             | Matches zero or one occurrence of the preceding character   |
+| ^             | Matches the beginning of a line                             |
+| $             | Matches the end of a line                                   |
+| [...]         | Matches any one of the characters within the brackets       |
+| [^...]        | Matches any character that is not within the brackets       |
+| (…)           | Matches the enclosed characters as a group                  |
+| \             | Matches either the expression before or after the \ symbol  |
 
 You can also use ranges, like `[A-Z]` or `[0-9]`.
 
@@ -86,7 +86,7 @@ For example, you can use [*regex101*](https://regex101.com/) to visualize the pa
 \b\(?(\d{3})\)?[- ]?(\d{3})[- ]?(\d{4})\b
 ```
 
-Copy paste that pattern into *regex101*, along some sample text that has phone numbers, like:
+Copy and paste the above pattern into *regex101*, along some sample text that has phone numbers, like:
 
 ```
 Here's some random text interspersed with telephone numbers like 123-456-7890 and (123) 456-7890. Notice how it matches only the telephone numbers, even though they have different formatting!
